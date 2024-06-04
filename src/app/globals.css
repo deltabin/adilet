@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #e7e7e7; /* Задний фон изменен на #e7e7e7 */
+	color: #333;
+}
+
+.nav {
+	background-color: #e7e7e7; /* Фон изменен на #e7e7e7 */
+	padding: 20px 20px; /* Увеличен padding для увеличения высоты */
+	position: fixed; /* Закрепление панели наверху */
+	width: 100%;
+	top: 0;
+	z-index: 1000; /* Увеличенный z-index */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box; /* Включаем padding в общую ширину */
+}
+
+.nav .logo {
+	width: 150px;
+}
+
+.nav nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 20px;
+}
+
+.nav nav ul li {
+	display: inline;
+}
+
+.nav nav ul li a {
+	color: black; /* Черный цвет текста */
+	text-decoration: none;
+	font-size: 1.2em;
+}
+
+.nav nav ul li a.button.details-nav {
+	background-color: black; /* Черный фон */
+	color: white; /* Белый текст */
+	padding: 10px 20px;
+	border-radius: 5px;
+}
+
+header {
+	position: relative;
+	background-image: url('/public/images/group.jpg');
+	background-size: cover;
+	background-position: center;
+	color: white;
+	padding: 20px;
+	min-height: 700px; /* Увеличенная высота заголовка */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start; /* Выравнивание по левому краю */
+	padding-left: 50px; /* Отступ от левого края */
+	text-align: left; /* Текст по левому краю */
+	z-index: 1;
+	margin-top: 60px; /* Уменьшен отступ для корректного отображения картинки */
+}
+
+header::before {
+	content: '';
+	position: absolute;
+	top: -20px;
+	left: 0;
+	width: 100%;
+	height: calc(100% + 20px);
+	background-color: rgba(0, 0, 0, 0.5); /* Темный оверлей */
+	z-index: -1;
+}
+
+header h1,
+header p {
+	text-shadow: 2px 2px 4px #000000;
+}
+
+header h1 {
+	font-size: 3em;
+	margin: 20px 0 10px;
+}
+
+header p {
+	font-size: 1.5em;
+	margin: 0 0 20px;
+}
+
+header .buttons {
+	display: flex;
+	gap: 10px;
+}
+
+header .button {
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+	color: white;
+}
+
+header .button.details {
+	background-color: black;
+}
+
+header .button.login {
+	background-color: gray;
+}
+
+header .button:hover {
+	opacity: 0.8;
+}
+
+.intro {
+	background-color: #e7e7e7;
+	padding: 40px 0;
+	text-align: left;
+}
+
+.intro .container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.intro-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.text-content {
+	flex: 1;
+	margin-right: 20px;
+}
+
+.image-content {
+	flex: 1;
+	text-align: center;
+}
+
+.image-content img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+
+.intro h2 {
+	font-size: 2em;
+	margin: 0 0 20px;
+}
+
+.intro p {
+	font-size: 1.2em;
+	margin: 0 0 20px;
+}
+
+.intro ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.intro ul li {
+	font-size: 1.2em;
+	margin: 10px 0;
+	display: flex;
+	align-items: center;
+}
+
+.intro ul li::before {
+	content: '\2022'; /* Пулевой символ */
+	color: black;
+	font-weight: bold;
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;
+}
+
+.articles {
+	background-color: #e7e7e7; /* Задний фон изменен на #e7e7e7 */
+	padding: 40px 0;
+}
+
+.articles .container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.articles h2 {
+	font-size: 2em;
+	text-align: center;
+	margin: 0 0 20px;
+}
+
+.article {
+	background-color: white;
+	padding: 20px;
+	margin: 10px 0;
+}
