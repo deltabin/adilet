@@ -40,7 +40,7 @@ const AdminPage = () => {
 			const response = await axios.post('api/posts', formData)
 
 			if (response.status === 200) {
-				router.push(`/blogs/${response.data.newPost.id}`)
+				router.push(`/post/${response.data.newPost.id}`)
 			}
 		} catch (error) {
 			console.error(error)
